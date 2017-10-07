@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>vue2</title>
-  </head>
-  <body>
+</head>
+<body>
     <div id="app">
-    	<h1 :id="numeroInteiro">{{titulo}}</h1>
-    	<a :href="link">Link</a>
-    	<p>{{numeroInteiro}}</p>
-    	<p>{{numeroFloat}}</p>
-    	<p>{{objeto}}</p>
+        <ul>
+            <li v-for="(time, index) in times">{{index+1}} {{time.nome}} <img :src="time.escudo" alt=""></li> 
+        </ul>
+
+        <!-- <ul>
+            <li v-for="x in 100">{{x}}</li>
+        </ul> -->
+
+        <hr>
+
+        <ul>
+            <li v-for="(valor, chave, index) in alfabeto">
+                {{index}} - {{chave}}: {{valor}}
+            </li>
+        </ul>
     </div>
     <script src="/dist/build.js"></script>
-  </body>
+</body>
 </html>
